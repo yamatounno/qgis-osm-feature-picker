@@ -1,0 +1,20 @@
+[general]
+name=OSM Feature Picker
+qgisMinimumVersion=3.16
+description=Download OpenStreetMap features for a lat/lon box or an arbitrary polygon via the Overpass API and load them as QGIS layers, with automatic tiling for large areas.
+description[ja]=緯度経度範囲または任意形状のポリゴンを指定し、Overpass API経由でOpenStreetMapの地物をQGISレイヤとして取得します。広い範囲は自動でタイル分割して取得します。
+version=0.1.0
+author=Yamato Unno
+email=unno.yamato@gmail.com
+about=Fetches OSM data for a bounding box (or the extent of a polygon layer) with tag filters and loads it as OGR/OSM sublayers (points/lines/multilinestrings/multipolygons/other_relations). Large areas are split into tiles and fetched one by one in a background thread with configurable pauses; each tile becomes its own layers immediately, and a tile-grid layer with a status field (pending/success/empty/failed) shows which tiles still need re-fetching. Tag-key autocomplete and per-area key/value discovery are included. Data (c) OpenStreetMap contributors, ODbL. Please follow the Overpass API usage policy.
+about[ja]=緯度経度範囲(またはポリゴンレイヤの範囲)とタグフィルタを指定してOSMデータを取得し、OGR/OSMのサブレイヤとして読み込みます。広い範囲はタイルに分割し、バックグラウンドで間隔を空けて1タイルずつ取得します。取得できたタイルは即座にレイヤ化され、タイル境界レイヤのstatus列(pending/success/empty/failed)で再取得が必要な範囲を確認できます。タグキーの入力補完や、範囲内のキー/値候補の取得機能もあります。データ (c) OpenStreetMap contributors, ODbL。Overpass APIの利用ポリシーに従ってください。
+changelog=0.1.0 - Initial release: bbox/polygon range, tag filters with key autocomplete, key/value discovery, automatic tiling with per-tile layers and tile-grid status layer.
+tracker=
+repository=
+homepage=
+experimental=True
+deprecated=False
+tags=osm,openstreetmap,overpass,download,tiles
+category=Vector
+icon=icon.png
+license=GPL-2.0-or-later

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+._*
+.DS_Store
+dist/
+# MLIT(国土数値情報)由来の動作確認用データ。再配布時は出典明記が必要なため含めない
+test_data/
